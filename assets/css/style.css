@@ -193,6 +193,13 @@ body{
     margin: 30px;
 }
 
+.dsp-f{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .output-area .ipt-btn:hover{
     color: #0A3871;
     background-color: #D8DFE8;
