@@ -29,9 +29,9 @@
             </div>
             <div class="form-container">
                 <div class="input-text">
-                    <form id="form" action=""></form>
-                    <textarea id="txt" class="txt-area" placeholder="Ingrese su texto aqui:" cols="53"
-                        rows="10"></textarea>
+                    <form id="form" action="">
+                        <textarea id="txt" class="txt-area" placeholder="Ingrese su texto aqui:" cols="53"
+                            rows="10"></textarea>
                 </div>
                 <div class="adca-text">
                     <span class="material-symbols-outlined">
@@ -68,7 +68,12 @@
                     <textarea disabled class="txt-area" placeholder="Escribe algo para desencriptar" id="dsc" cols="27"
                         rows="10" style="display:none;"></textarea>
 
-                    <button class="ipt-btn" id="copy-text" style="display: none;">Copiar</button>
+                    <button class="ipt-btn" id="copy-text" style="display: none;">
+                        <span class="material-symbols-outlined" style="font-size: 1.2em; margin-right: 5px;">
+                            content_copy
+                        </span>
+                        <p>Copiar</p>
+                    </button>
                 </div>
             </div>
         </div>

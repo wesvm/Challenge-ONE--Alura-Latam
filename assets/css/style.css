@@ -16,7 +16,6 @@ body{
 
 .input-container{
     width: 70%;
-    
 }
 
 .text-container{
@@ -177,7 +176,7 @@ body{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 19px;
     text-align: center;
     color: white;
@@ -191,6 +190,10 @@ body{
     cursor: pointer;
     transition: 0.5s;
     margin: 30px;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .output-area .ipt-btn:hover{

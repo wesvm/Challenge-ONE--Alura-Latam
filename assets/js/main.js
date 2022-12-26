@@ -36,30 +36,22 @@ function decrypt(text) {
 const form = document.getElementById('form');
 
 form.addEventListener('submit', function (e) {
-    e.preventDefault(); // prevent the form from being submitted
+    e.preventDefault();
 
-    // get the value of the button that was clicked
     const buttonValue = e.target.querySelector('button[type="submit"]:focus').value;
-
-    // get the value of the text input
     const text = e.target.txt.value;
 
     if (buttonValue === 'encrypt') {
-        // encrypt the text
         const encryptedText = encrypt(text);
-        // update the encrypted text input with the encrypted text
         document.getElementById('enc').value = encryptedText;
     } else if (buttonValue === 'decrypt') {
-        // decrypt the text
         const decryptedText = decrypt(text);
-        // update the decrypted text input with the decrypted text
         document.getElementById('dsc').value = decryptedText;
     }
 });
 
 const txtInput = document.getElementById("txt");
 txtInput.addEventListener("input", function (e) {
-    // get the value of the text input
     const text = e.target.value;
 
     const enc = encrypt(text);
