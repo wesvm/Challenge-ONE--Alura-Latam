@@ -190,7 +190,10 @@ body{
     cursor: pointer;
     transition: 0.5s;
     margin: 30px;
-    display: flex !important;
+}
+
+.dsp-f{
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;

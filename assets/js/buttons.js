@@ -29,6 +29,7 @@ btnEnc.addEventListener("click", function () {
 btnDsc.addEventListener("click", function () {
     if (dsc.style.display === "none") {
         dsc.style.display = "block";
+        btnCopy.style.display = "block";
         areaimg.style.display = "none";
         enc.style.display = "none";
         setEstadoBtn(btnDsc, btnEnc);

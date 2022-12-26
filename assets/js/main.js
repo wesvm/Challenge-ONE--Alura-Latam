@@ -54,10 +54,12 @@ const txtInput = document.getElementById("txt");
 txtInput.addEventListener("input", function (e) {
     const text = e.target.value;
 
-    const enc = encrypt(text);
+    const textValidado = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+
+    const enc = encrypt(textValidado);
     document.getElementById("enc").value = enc;
 
-    const dsc = decrypt(text);
+    const dsc = decrypt(textValidado);
     document.getElementById("dsc").value = dsc;
 });
 
