@@ -10,7 +10,6 @@
 // La letra "o" es convertida para "ober"
 // La letra "u" es convertida para "ufat"
 
-
 function encrypt(text) {
     let enc = text
         .replaceAll('e', 'enter')

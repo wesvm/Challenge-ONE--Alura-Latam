@@ -55,27 +55,4 @@ btnCopy.addEventListener("click", function (e) {
     clipboard.writeText(elemento.value);
     setEstado(texto, icono);
 
-    //
-    // if (enc.style.display === "block") {
-    //     let copy = enc.value;
-    //     clipboard.writeText(copy);
-    //     texto.innerHTML = 'Copiado';
-    //     icono.innerHTML = 'task_alt';
-    //     setTimeout(function () {
-    //         texto.innerHTML = 'Copiar';
-    //         icono.innerHTML = 'content_copy';
-    //     }, 1000)
-    // } else if (dsc.style.display === "block") {
-    //     let copy = dsc.value;
-    //     clipboard.writeText(copy);
-    //     texto.innerHTML = 'Copiado';
-    //     icono.innerHTML = 'task_alt';
-    //     setTimeout(function () {
-    //         texto.innerHTML = 'Copiar';
-    //         icono.innerHTML = 'content_copy';
-    //     }, 1000)
-    // } else {
-    //     //no copy
-    // }
-
 })
