@@ -10,6 +10,10 @@
 // La letra "o" es convertida para "ober"
 // La letra "u" es convertida para "ufat"
 
+// https://www.youtube.com/watch?v=s3pC93LgP18
+
+import { setError } from './buttons.js';
+
 function encrypt(text) {
     let enc = text
         .replaceAll('e', 'enter')
@@ -34,7 +38,7 @@ function decrypt(text) {
 
 const form = document.getElementById('form');
 
-form.addEventListener('submit', function (e) {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const buttonValue = e.target.querySelector('button[type="submit"]:focus').value;
@@ -50,17 +54,35 @@ form.addEventListener('submit', function (e) {
 });
 
 const txtInput = document.getElementById("txt");
-txtInput.addEventListener("input", function (e) {
+const info = document.getElementById('info');
+const exp = /^[a-z\s\d]+$/;
+
+txtInput.addEventListener("input", (e) => {
     const text = e.target.value;
 
-    const textValidado = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+    if (exp.test(text) || text == '') {
 
-    const enc = encrypt(textValidado);
-    document.getElementById("enc").value = enc;
+        info.classList.remove('text-error');
+        txtInput.classList.remove('text-error');
 
-    const dsc = decrypt(textValidado);
-    document.getElementById("dsc").value = dsc;
+        const textValidado = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+        const enc = encrypt(textValidado);
+        document.getElementById("enc").value = enc;
+
+        const dsc = decrypt(textValidado);
+        document.getElementById("dsc").value = dsc;
+
+        setError(false);
+
+    } else {
+        info.classList.add('text-error');
+        txtInput.classList.add('text-error');
+        setError(true);
+    }
+
 });
+
+
 
 
 

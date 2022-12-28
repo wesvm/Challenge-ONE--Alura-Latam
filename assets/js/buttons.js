@@ -1,20 +1,43 @@
 const btnEnc = document.getElementById('encrypt');
 const btnDsc = document.getElementById('decrypt');
 
-const txt = document.getElementById('txt')
+const txt = document.getElementById('txt');
 const enc = document.getElementById('enc');
 const dsc = document.getElementById('dsc');
 
-const areaimg = document.getElementById('img-area')
+const areaimg = document.getElementById('img-area');
 
-const btnCopy = document.getElementById('copy-text')
+const btnCopy = document.getElementById('copy-text');
+
+function setError(isError = false) {
+
+    if (isError) {
+        btnEnc.disabled = isError;
+        btnDsc.disabled = isError;
+
+        btnEnc.style.backgroundColor = '#0A3871';
+        btnDsc.style.backgroundColor = '#0A3871';
+
+        btnEnc.style.color = '#D8DFE8';
+        btnDsc.style.color = '#D8DFE8';
+
+        areaimg.style.display = "block";
+        dsc.style.display = "none";
+        enc.style.display = "none";
+    } else {
+        btnEnc.disabled = false;
+        btnDsc.disabled = false;
+    }
+};
+
+export { setError };
 
 function setEstadoBtn(btnBlue, btnWhite) {
     btnBlue.style.backgroundColor = '#0A3871';
     btnWhite.style.backgroundColor = '#D8DFE8';
     btnBlue.style.color = '#D8DFE8';
     btnWhite.style.color = '#0A3871';
-}
+};
 
 btnEnc.addEventListener("click", function () {
     if (enc.style.display === "none") {
@@ -54,5 +77,4 @@ btnCopy.addEventListener("click", function (e) {
 
     clipboard.writeText(elemento.value);
     setEstado(texto, icono);
-
 })

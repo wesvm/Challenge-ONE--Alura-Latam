@@ -22,6 +22,14 @@ body{
     width: 30%;
 }
 
+.text-error{
+    color: #bb2929 !important;
+}
+
+.text-error:focus{
+    border: 2px solid #bb2929 !important;
+}
+
 .card-text{
     background-color: #FFFFFF;
     margin: 15px;
@@ -44,6 +52,7 @@ body{
     resize: none;
     color: #072B61;
     border: none;
+    background-color: #FFFFFF;
 }
 
 .form-container{

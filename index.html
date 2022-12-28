@@ -8,6 +8,7 @@
     <title>Challenge G4 - ONE</title>
     <link rel="icon" type="image/x-icon" href="./assets/icons/alura-icon.ico">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
@@ -28,21 +29,24 @@
                 <img src="./assets/imgs/logo-alura.png" alt="logo-alura" style="margin: 15px;">
             </div>
             <div class="form-container">
-                <div class="input-text">
-                    <form id="form" action="">
-                        <textarea id="txt" class="txt-area" placeholder="Ingrese su texto aqui:" cols="53"
-                            rows="10"></textarea>
-                </div>
-                <div class="adca-text">
-                    <span class="material-symbols-outlined">
-                        info
-                    </span>
-                    <p>Solo letras minúsculas y sin acentos</p>
-                </div>
-                <div class="input-button">
-                    <button class="ipt-btn" type="submit" id="encrypt" value="encrypt">Encriptar</button>
-                    <button class="ipt-btn" type="submit" id="decrypt" value="decrypt">Desencriptar</button>
-                </div>
+                <form id="form" action="">
+                    <div class="form-group-text">
+                        <div class="input-text">
+                            <textarea id="txt" class="txt-area" placeholder="Ingrese su texto aqui:" cols="53"
+                                rows="10"></textarea>
+                        </div>
+                        <div class="adca-text" id="info">
+                            <span class="material-symbols-outlined">
+                                info
+                            </span>
+                            <p>Solo letras minúsculas y sin acentos</p>
+                        </div>
+                    </div>
+
+                    <div class="input-button">
+                        <button class="ipt-btn" type="submit" id="encrypt" value="encrypt">Encriptar</button>
+                        <button class="ipt-btn" type="submit" id="decrypt" value="decrypt">Desencriptar</button>
+                    </div>
                 </form>
             </div>
 
@@ -81,8 +85,8 @@
         </div>
     </div>
 </body>
-<script src="./assets/js/main.js"></script>
-<script src="./assets/js/buttons.js"></script>
+<script type="module" src="./assets/js/main.js"></script>
+<script type="module" src="./assets/js/buttons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard-polyfill/2.8.6/clipboard-polyfill.js"></script>
 
 </html>
