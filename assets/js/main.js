@@ -55,7 +55,7 @@ form.addEventListener('submit', (e) => {
 
 const txtInput = document.getElementById("txt");
 const info = document.getElementById('info');
-const exp = /^[a-z\s\d]+$/;
+const exp = /^[a-z¿?¡!\s\d]+$/;
 
 txtInput.addEventListener("input", (e) => {
     const text = e.target.value;
