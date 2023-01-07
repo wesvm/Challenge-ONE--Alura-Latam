@@ -1,4 +1,4 @@
-@media screen and (min-width:0) and (max-width:425px){
+@media screen and (min-width:0) and (max-width:719px){
     .main-container{
         width: auto;
         display: flex;
@@ -58,7 +58,7 @@
 
 }
 
-@media screen and (min-width:426px) and (max-width:1023px){
+@media screen and (min-width:720px) and (max-width:1023px){
     .main-container{
         width: auto;
         display: flex;
