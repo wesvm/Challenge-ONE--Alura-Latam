@@ -99,7 +99,6 @@ body{
 }
 
 .input-button{
-    margin: 0px 60px 20px 60px;
     display: flex;
     justify-content: space-evenly;
 }
