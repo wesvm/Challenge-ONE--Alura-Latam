@@ -1,37 +1,47 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
 }
 
-body{
+body {
     background-color: #E5E5E5;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
 }
 
-.main-container{
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.main-container {
     width: 100%;
-    height: 100%;
-    display: inline-flex;
     overflow: hidden;
+    display: inline-flex;
 }
 
-.input-container{
+.input-container {
     width: 70%;
 }
 
-.text-container{
+.text-container {
     width: 30%;
 }
 
-.text-error{
+.text-error {
     color: #bb2929 !important;
 }
 
-.text-error:focus{
+.text-error:focus {
     border: 2px solid #bb2929 !important;
 }
 
-.card-text{
+.card-text {
     background-color: #FFFFFF;
     margin: 15px;
     height: auto;
@@ -46,10 +56,7 @@ body{
     overflow: hidden;
 }
 
-.output-area .txt-area{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
+.output-area .txt-area {
     font-size: 21px;
     line-height: 1.5;
     resize: none;
@@ -57,22 +64,19 @@ body{
     border: none;
     background-color: #FFFFFF;
     margin: 30px;
-    height: 350px;
+    height: 15rem;
     width: -webkit-fill-available;
 }
 
-.form-container{
-    padding: 20px;
+.form-container {
+    padding: 15px;
 }
 
-.input-text{
-    margin: 0 60px 0px 60px;
+.input-text {
+    margin: 0 50px 0px 50px;
 }
 
-.input-text .txt-area{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
+.input-text .txt-area {
     font-size: 27px;
     line-height: 1.5;
     resize: none;
@@ -80,40 +84,35 @@ body{
     background-color: #E5E5E5;
     border: none;
     padding: 15px 0 0px 15px;
+    width: 100%;
+    height: 20rem;
 }
 
-.input-text .txt-area:focus{
+.input-text .txt-area:focus {
     border: 2px solid #0A3871;
     border-radius: 15px;
     outline: none;
 }
 
-.input-text .txt-area::placeholder{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
+.input-text .txt-area::placeholder {
     font-size: 27px;
     line-height: 1.5;
     color: #072B61;
-    
 }
 
-.input-button{
+.input-button {
+    margin: 0px 50px 0px 50px;
     display: flex;
     justify-content: space-evenly;
 }
 
-.input-button .ipt-btn{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
+.input-button .ipt-btn {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
     background: #0A3871;
     width: 280px;
     height: 60px;
-    border-radius: 24px;
     color: white;
     border: 1px solid #0A3871;
     border-radius: 24px;
@@ -122,19 +121,16 @@ body{
     transition: 0.5s;
 }
 
-.input-button .ipt-btn:hover{
+.input-button .ipt-btn:hover {
     color: #0A3871;
     background-color: #D8DFE8;
     transform: scale(1.0);
 }
 
-.adca-text{
-    margin: 15px 60px 0 60px;
+.adca-text {
+    margin: 15px 60px 15px 60px;
     color: #495057;
     opacity: 0.8;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
     font-size: 12px;
     line-height: 150%;
     width: auto;
@@ -142,11 +138,11 @@ body{
     align-items: center;
 }
 
-.adca-text p{
+.adca-text p {
     margin-left: 10px;
 }
 
-.img-inicio{
+.img-inicio {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -155,43 +151,35 @@ body{
     margin: 2em;
 }
 
-.img-person img{
+.img-person img {
     width: 280px;
-
 }
-.img-text{
+
+.img-text {
     width: 250px;
 }
 
-.img-text h3{
+.img-text h3 {
     color: #343A40;
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 120%;
     text-align: center;
 }
 
-.img-text p{
+.img-text p {
     color: #495057;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     text-align: center;
 }
 
-.img-area{
+.img-area {
     height: 100%;
     overflow: hidden;
 }
 
-.output-area .ipt-btn{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
+.output-area .ipt-btn {
     font-size: 14px;
     line-height: 19px;
     text-align: center;
@@ -199,7 +187,6 @@ body{
     background: #0A3871;
     width: 250px;
     height: 50px;
-    border-radius: 24px;
     border: 1px solid #0A3871;
     border-radius: 24px;
     letter-spacing: 1px;
@@ -208,19 +195,39 @@ body{
     margin: 30px;
 }
 
-.output-area{
-    overflow: hidden;
-}
-
-.dsp-f{
+.dsp-f {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.output-area .ipt-btn:hover{
+.output-area .ipt-btn:hover {
     color: #0A3871;
     background-color: #D8DFE8;
     transform: scale(1.0);
+}
+
+.container-footer {
+    margin-top: 2em;
+    background: #FFFFFF;
+    border-top: 5px solid rgba(15, 15, 15, 0.15);
+    padding: 2em;
+    font-size: 13px;
+}
+
+.container-footer .box-footer {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.text-muted a {
+    color: #6c757d !important;
 }
