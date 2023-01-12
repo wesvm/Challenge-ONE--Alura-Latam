@@ -26,7 +26,6 @@ function setError(isError = false) {
         btnCopy.style.display = "none";
         dsc.style.display = "none";
         enc.style.display = "none";
-        btnCopy.style.display = "none";
     } else {
         btnEnc.disabled = false;
         btnDsc.disabled = false;
