@@ -24,6 +24,7 @@ function setError(isError = false) {
         areaimg.style.display = "block";
         dsc.style.display = "none";
         enc.style.display = "none";
+        btnCopy.style.display = "none";
     } else {
         btnEnc.disabled = false;
         btnDsc.disabled = false;
