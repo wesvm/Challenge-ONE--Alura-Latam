@@ -23,66 +23,82 @@
 </head>
 
 <body>
-    <div class="main-container">
-        <div class="input-container">
-            <div class="img-alura">
-                <img src="./assets/imgs/logo-alura.png" alt="logo-alura" style="margin: 15px;">
-            </div>
-            <div class="form-container">
-                <form id="form" action="">
-                    <div class="form-group-text">
-                        <div class="input-text">
-                            <textarea id="txt" class="txt-area" placeholder="Ingrese su texto aqui:" cols="53"
-                                rows="10"></textarea>
-                        </div>
-                        <div class="adca-text" id="info">
-                            <span class="material-symbols-outlined">
-                                info
-                            </span>
-                            <p>Solo letras minúsculas y sin acentos</p>
-                        </div>
-                    </div>
-
-                    <div class="input-button">
-                        <button class="ipt-btn" type="submit" id="encrypt" value="encrypt">Encriptar</button>
-                        <button class="ipt-btn" type="submit" id="decrypt" value="decrypt">Desencriptar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="text-container">
-            <div class="card-text">
-                <div class="img-area" id="img-area" style="display:block;">
-                    <div class="img-inicio">
-                        <div class="img-person">
-                            <img src="./assets/imgs/person-image.png" alt="person-image">
-                        </div>
-                        <div class="img-text">
-                            <h3>Ningún mensaje fue encontrado</h3>
-                            <p>Ingresa el texto que deseas encriptar o desencriptar</p>
-                        </div>
-                    </div>
+    <main>
+        <div class="main-container">
+            <div class="input-container">
+                <div class="img-alura">
+                    <img src="./assets/imgs/logo-alura.png" alt="logo-alura" style="margin: 15px;">
                 </div>
-
-                <div class="output-area">
-                    <textarea disabled class="txt-area" placeholder="Escribe algo para encriptar" id="enc"
-                        style="display:none;"></textarea>
-                    <textarea disabled class="txt-area" placeholder="Escribe algo para desencriptar" id="dsc"
-                        style="display:none;"></textarea>
-
-                    <button class="ipt-btn" id="copy-text" style="display: none;">
-                        <div class="dsp-f">
-                            <span class="material-symbols-outlined" style="font-size: 1.2em; margin-right: 5px;">
-                                content_copy
-                            </span>
-                            <p>Copiar</p>
+                <div class="form-container">
+                    <form id="form" action="">
+                        <div class="form-group-text">
+                            <div class="input-text">
+                                <textarea id="txt" class="txt-area" placeholder="Ingrese su texto aqui:" cols="53"
+                                    rows="10"></textarea>
+                            </div>
+                            <div class="adca-text" id="info">
+                                <span class="material-symbols-outlined">
+                                    info
+                                </span>
+                                <p>Solo letras minúsculas y sin acentos</p>
+                            </div>
                         </div>
-                    </button>
+
+                        <div class="input-button">
+                            <button class="ipt-btn" type="submit" id="encrypt" value="encrypt">Encriptar</button>
+                            <button class="ipt-btn" type="submit" id="decrypt" value="decrypt">Desencriptar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
+
+            <div class="text-container">
+                <div class="card-text">
+                    <div class="img-area" id="img-area" style="display:block;">
+                        <div class="img-inicio">
+                            <div class="img-person">
+                                <img src="./assets/imgs/person-image.png" alt="person-image">
+                            </div>
+                            <div class="img-text">
+                                <h3>Ningún mensaje fue encontrado</h3>
+                                <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="output-area">
+                        <textarea disabled class="txt-area" placeholder="Escribe algo para encriptar" id="enc"
+                            style="display:none;"></textarea>
+                        <textarea disabled class="txt-area" placeholder="Escribe algo para desencriptar" id="dsc"
+                            style="display:none;"></textarea>
+
+                        <button class="ipt-btn" id="copy-text" style="display: none;">
+                            <div class="dsp-f">
+                                <span class="material-symbols-outlined" style="font-size: 1.2em; margin-right: 5px;">
+                                    content_copy
+                                </span>
+                                <p>Copiar</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
+    <footer class="container-footer">
+        <div class="box-footer">
+            <p class="text-muted">
+                © 2023, Challenge ONE - <a href="https://www.aluracursos.com" target="_blank">Alura Latam</a>
+            </p>
+            <p class="text-muted">
+                Design by <a href="https://app.aluracursos.com/user/samuelwalter2001" target="_blank">Walter Vilca</a> |
+                All rights
+                reserved
+            </p>
+        </div>
+        </div>
+    </footer>
+
 </body>
 <script type="module" src="./assets/js/main.js"></script>
 <script type="module" src="./assets/js/buttons.js"></script>
