@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 @media screen and (min-width:0) and (max-width:700px) {
     .main-container {
-=======
-@media screen and (min-width:0) and (max-width:719px){
-    .main-container{
->>>>>>> 56c7e926f2fc51de8419f24e34ddcf076f987d64
         width: auto;
         display: flex;
         flex-direction: column;
@@ -71,13 +66,8 @@
     }
 }
 
-<<<<<<< HEAD
 @media screen and (min-width:701px) and (max-width:1023px) {
     .main-container {
-=======
-@media screen and (min-width:720px) and (max-width:1023px){
-    .main-container{
->>>>>>> 56c7e926f2fc51de8419f24e34ddcf076f987d64
         width: auto;
         display: flex;
         flex-direction: row;
@@ -116,12 +106,4 @@
     .text-container {
         width: auto;
     }
-<<<<<<< HEAD
 }
-=======
-
-    .output-area .txt-area{
-        height: 150px;
-    }
-}
->>>>>>> 56c7e926f2fc51de8419f24e34ddcf076f987d64

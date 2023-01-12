@@ -100,12 +100,8 @@ a {
     color: #072B61;
 }
 
-<<<<<<< HEAD
 .input-button {
     margin: 0px 50px 0px 50px;
-=======
-.input-button{
->>>>>>> 56c7e926f2fc51de8419f24e34ddcf076f987d64
     display: flex;
     justify-content: space-evenly;
 }
@@ -211,7 +207,6 @@ a {
     background-color: #D8DFE8;
     transform: scale(1.0);
 }
-<<<<<<< HEAD
 
 .container-footer {
     margin-top: 2em;
@@ -236,5 +231,3 @@ a {
 .text-muted a {
     color: #6c757d !important;
 }
-=======
->>>>>>> 56c7e926f2fc51de8419f24e34ddcf076f987d64
