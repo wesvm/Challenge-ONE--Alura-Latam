@@ -22,7 +22,7 @@ function setError(isError = false) {
         btnDsc.style.color = '#D8DFE8';
 
         areaimg.style.display = "block";
-        
+
         btnCopy.style.display = "none";
         dsc.style.display = "none";
         enc.style.display = "none";
