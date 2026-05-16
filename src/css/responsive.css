@@ -1,0 +1,151 @@
+@media screen and (max-width: 700px) {
+
+    body {
+        grid-template-rows: 1fr auto;
+    }
+
+    main {
+        overflow: hidden;
+    }
+
+    .main-container {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .input-section {
+        width: 100%;
+        flex: 1;
+        min-height: 0;
+    }
+
+    .logo-wrapper {
+        padding: 10px 20px 0;
+    }
+
+    .logo-wrapper img {
+        height: 32px;
+        width: auto;
+    }
+
+    .form-wrapper {
+        padding: 8px;
+    }
+
+    .textarea-wrapper {
+        margin: 8px 16px 0;
+    }
+
+    .textarea-wrapper .txt-area {
+        font-size: 18px;
+        padding: 8px 0 0 8px;
+    }
+
+    .textarea-wrapper .txt-area::placeholder {
+        font-size: 18px;
+    }
+
+    .input-hint {
+        margin: 4px 8px;
+    }
+
+    .btn-group {
+        flex-direction: row;
+        margin: 0 16px;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 140px;
+        height: 44px;
+        font-size: 14px;
+    }
+
+    .output-section {
+        width: 100%;
+        flex: 1;
+        min-height: 0;
+    }
+
+    .output-card {
+        margin: 8px 16px;
+    }
+
+    .output-empty img {
+        width: min(140px, 40%);
+    }
+
+    .output-empty h3 {
+        font-size: 18px;
+    }
+
+    .output-empty p {
+        font-size: 14px;
+    }
+
+    .output-result .txt-area {
+        font-size: 16px;
+        margin: 16px 16px 0;
+        width: calc(100% - 32px);
+    }
+
+    .btn--copy {
+        height: 40px;
+        width: 180px;
+        margin: 12px;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        text-align: center;
+        padding: 0.75em;
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1023px) {
+
+    .logo-wrapper {
+        padding: 10px 30px 0;
+    }
+
+    .form-wrapper {
+        padding: 8px;
+    }
+
+    .textarea-wrapper {
+        margin: 8px 30px 0;
+    }
+
+    .textarea-wrapper .txt-area {
+        font-size: 20px;
+        padding: 8px 0 0 8px;
+    }
+
+    .textarea-wrapper .txt-area::placeholder {
+        font-size: 20px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        gap: 8px;
+    }
+
+    .btn {
+        width: 220px;
+        height: 50px;
+    }
+
+    .output-card {
+        height: auto;
+    }
+
+    .output-empty img {
+        width: min(200px, 60%);
+    }
+}

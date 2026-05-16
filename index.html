@@ -1,107 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenge G4 - ONE</title>
-    <link rel="icon" type="image/x-icon" href="./assets/icons/alura-icon.ico">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings:
-                'FILL' 0,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 48
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encriptador y desencriptador de texto — Challenge ONE Alura Latam">
+  <title>Conversor de Texto — Challenge ONE</title>
+
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
+  <link rel="stylesheet" href="./src/css/main.css">
+  <link rel="stylesheet" href="./src/css/responsive.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 </head>
 
 <body>
-    <main>
-        <div class="main-container">
-            <div class="input-container">
-                <div class="img-alura">
-                    <img src="./assets/imgs/logo-alura.png" alt="logo-alura" style="margin-top: 15px;">
-                </div>
-                <div class="form-container">
-                    <form id="form" action="">
-                        <div class="form-group-text">
-                            <div class="input-text">
-                                <textarea id="txt" class="txt-area" placeholder="Ingrese su texto aqui:" /></textarea>
-                            </div>
-                            <div class="adca-text" id="info">
-                                <span class="material-symbols-outlined">
-                                    info
-                                </span>
-                                <p>Solo letras minúsculas y sin acentos</p>
-                            </div>
-                        </div>
 
-                        <div class="input-button">
-                            <button class="ipt-btn" type="submit" id="encrypt" value="encrypt">Encriptar</button>
-                            <button class="ipt-btn" type="submit" id="decrypt" value="decrypt">Desencriptar</button>
-                        </div>
-                    </form>
-                </div>
+  <main>
+    <div class="main-container">
+
+      <section class="input-section">
+        <div class="logo-wrapper">
+          <img src="./assets/images/logo.png" alt="Logo Alura Latam">
+        </div>
+
+        <div class="form-wrapper">
+          <div class="textarea-wrapper">
+            <textarea id="input-text" class="txt-area" placeholder="Ingrese su texto aqui:"
+              aria-label="Texto a encriptar o desencriptar"></textarea>
+
+            <div class="input-hint">
+              <span class="material-symbols-outlined" aria-hidden="true">info</span>
+              <p>Solo letras minúsculas y sin acentos</p>
             </div>
+          </div>
 
-            <div class="text-container">
-                <div class="card-text">
-                    <div class="img-area" id="img-area" style="display:block;">
-                        <div class="img-inicio">
-                            <div class="img-person">
-                                <img src="./assets/imgs/person-image.png" alt="person-image">
-                            </div>
-                            <div class="img-text">
-                                <h3>Ningún mensaje fue encontrado</h3>
-                                <p>Ingresa el texto que deseas encriptar o desencriptar</p>
-                            </div>
-                        </div>
-                    </div>
+          <div class="btn-group">
+            <button class="btn btn--primary" id="btn-encrypt" type="button">Encriptar</button>
+            <button class="btn btn--secondary" id="btn-decrypt" type="button">Desencriptar</button>
+          </div>
+        </div>
+      </section>
 
-                    <div class="output-area">
-                        <textarea disabled class="txt-area" placeholder="Escribe algo para encriptar" id="enc"
-                            style="display:none;"></textarea>
-                        <textarea disabled class="txt-area" placeholder="Escribe algo para desencriptar" id="dsc"
-                            style="display:none;"></textarea>
+      <section class="output-section">
+        <div class="output-card">
 
-                        <button class="ipt-btn" id="copy-text" style="display: none;">
-                            <div class="dsp-f">
-                                <span class="material-symbols-outlined" style="font-size: 1.2em; margin-right: 5px;">
-                                    content_copy
-                                </span>
-                                <p>Copiar</p>
-                            </div>
-                        </button>
-                    </div>
-                </div>
+          <div class="output-empty" id="output-empty">
+            <div id="empty-initial">
+              <img src="./assets/images/person.png" alt="">
+              <h3>Ningún mensaje fue encontrado</h3>
+              <p>Ingresa el texto que deseas encriptar o desencriptar</p>
             </div>
-        </div>
-    </main>
+            <div id="empty-hint" hidden>
+              <span class="material-symbols-outlined">edit_note</span>
+              <p id="empty-hint-text">Escribe algo para encriptar</p>
+            </div>
+          </div>
 
-    <footer class="container-footer">
-        <div class="box-footer">
-            <p class="text-muted">
-                © 2023, Challenge ONE - <a href="https://www.aluracursos.com" target="_blank">Alura Latam</a>
-            </p>
-            <p class="text-muted">
-                Design by <a href="https://app.aluracursos.com/user/samuelwalter2001" target="_blank">Walter Vilca</a> |
-                All rights
-                reserved
-            </p>
+          <div class="output-result" id="output-result" hidden>
+            <textarea id="output-text" class="txt-area" aria-label="Resultado" aria-live="polite" disabled></textarea>
+
+            <button class="btn btn--copy" id="btn-copy" type="button">
+              <span class="material-symbols-outlined" aria-hidden="true">content_copy</span>
+              Copiar
+            </button>
+          </div>
+
         </div>
-        </div>
-    </footer>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2023, Challenge ONE — <a href="https://www.aluracursos.com" target="_blank" rel="noopener">Alura Latam</a></p>
+    <p>Design by <a href="https://app.aluracursos.com/user/samuelwalter2001" target="_blank" rel="noopener">Walter
+        Vilca</a> — All rights reserved</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard-polyfill/2.8.6/clipboard-polyfill.js"></script>
+  <script type="module" src="./src/js/app.js"></script>
 
 </body>
-<script type="module" src="./assets/js/main.js"></script>
-<script type="module" src="./assets/js/buttons.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard-polyfill/2.8.6/clipboard-polyfill.js"></script>
 
 </html>
